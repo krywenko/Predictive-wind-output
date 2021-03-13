@@ -29,8 +29,7 @@ MQTT=192.168.168.251
 
 
 
-#JSON=$(lynx -dump "https://api.weatherbit.io/v2.0/forecast/hourly?&lat=$LAT&lon=-$LON&key=$API&hours=24"  )
-#echo $JSON | jq > JSON
+
 JSON=$( cat weewx)
 echo $JSON | jq ' "\(.dateTime),\(.outTemp_C),\(.windSpeed_kph),\(.barometer_mbar),\(.outHumidity),\(.dewpoint_C)" ' |tr -d '"' > windWXT
  while IFS=, read -r Time Temp Wind  Pres RH DEW
