@@ -45,10 +45,10 @@ if [ $DEW == null ]; then DEW=$DEWP ; fi
 
 
 # echo $Time,$Temp,$Wind,$Pres,$RH,$DEW
- echo $Time,$Temp,$Wind,$Pres,$RH,$DEW > wePrev
+ #echo $Time,$Temp,$Wind,$Pres,$RH,$DEW > wePrev
  
 done < wePrev
-
+ echo $Time,$Temp,$Wind,$Pres,$RH,$DEW > wePrev
 done < windWXT
 #############################################################
 
